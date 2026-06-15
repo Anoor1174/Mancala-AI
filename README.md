@@ -42,7 +42,7 @@ The heuristic evaluates board states by considering:
 ## Features
 
 
--Minimax search with configurable depth
+- Minimax search with configurable depth
 - Alpha-Beta pruning for efficient tree traversal
 -Custom evaluation function balancing offensive and defensive play
 - Human vs AI and AI vs AI modes
