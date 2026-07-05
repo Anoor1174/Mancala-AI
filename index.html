@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mancala — Play the Alpha-Beta AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="page-head">
+    <p class="eyebrow">Two-player sowing game &middot; est. centuries ago</p>
+    <h1>Mancala</h1>
+    <p class="subtitle">You play the bottom row. The AI searches the game tree with minimax and alpha-beta pruning.</p>
+  </header>
+
+  <main class="table">
+
+    <div class="board-wrap">
+
+      <div class="store store--left" id="store-p1">
+        <span class="store-label">P1</span>
+        <span class="store-count" id="store-p1-count">0</span>
+      </div>
+
+      <div class="board" id="board">
+        <div class="pit-row pit-row--top" id="row-top"></div>
+        <div class="pit-row pit-row--bottom" id="row-bottom"></div>
+      </div>
+
+      <div class="store store--right" id="store-p0">
+        <span class="store-label">You</span>
+        <span class="store-count" id="store-p0-count">0</span>
+      </div>
+
+    </div>
+
+    <div class="status-bar">
+      <p class="status-text" id="status-text">Your turn — pick a pit on your row.</p>
+    </div>
+
+    <div class="controls">
+      <label class="difficulty">
+        Difficulty
+        <select id="difficulty">
+          <option value="4">Easy</option>
+          <option value="6" selected>Medium</option>
+          <option value="9">Hard</option>
+        </select>
+      </label>
+      <button id="new-game" class="btn">New game</button>
+    </div>
+
+  </main>
+
+  <footer class="page-foot">
+    <p>Rules: sow counter-clockwise, land your last seed in your own store for another turn, land it in an empty pit on your side to capture straight across.</p>
+  </footer>
+
+  <script src="board.js"></script>
+  <script src="ai.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
