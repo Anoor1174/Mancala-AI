@@ -50,37 +50,6 @@ The heuristic evaluates board states by considering:
 
 
 
-## Tech Stack
-
-
-- Language: Python 3
-
-
-## Getting Started
-```
-bash# Clone the repository
-git clone https://github.com/Anoor1174/mancala-ai.git
-cd mancala-ai
-
-Run the game
-
-python main.py
-
-## Configuration
-
-In main.py, adjust the search depth to control AI difficulty:
-
-pythonDEPTH = 6  # Higher = stronger but slower (recommend 4–8)
-
-```
-## Project Structure
-```
-├── main.py          # Entry point — game loop and UI
-├── board.py         # Board state, move validation, game rules
-├── ai.py            # Minimax + Alpha-Beta pruning logic
-└── evaluate.py      # Heuristic evaluation function
-```
-
 ## Game Rules
 
 Mancala is played on a board with 6 pits per player and one store each. On each turn, a player picks up all seeds from one of their pits and distributes them counter-clockwise, one per pit. Rules applied:
